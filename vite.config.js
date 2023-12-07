@@ -8,4 +8,10 @@ export default defineConfig({
             refresh: true,
         }),
     ],
-});
+    plugins: [
+        // ...
+        svgLoader(),
+      ],
+    
+    });
+
