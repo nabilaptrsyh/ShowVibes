@@ -19,7 +19,7 @@
 .header {
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(img/header\ nav.png);
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(img/header-nav.jpeg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -331,21 +331,21 @@ h3 {
     
         <div class="row">
             <div class="movie-col">
-                <img src="img/arianagrande.jpg">
+                <img src="img/godzilla.jpeg">
                 <div class= "layer">
-                    <h3>ARIANA GRANDE</h3>
+                    <h3>AVENGERS</h3>
                 </div>
             </div>
             <div class="movie-col">
-                <img src="img/gigihadid.jpg">
+                <img src="img/godzilla.jpeg">
                 <div class= "layer">
-                    <h3>GIGI HADID</h3>
+                    <h3>AVENGERS</h3>
                 </div>
             </div>
             <div class="movie-col">
-                <img src="img/kendalljenner.jpg">
+                <img src="img/godzilla.jpeg">
                 <div class= "layer">
-                    <h3>KENDALL JENNER</h3>
+                    <h3>AVENGERS</h3>
                 </div>
             </div>
         
@@ -364,7 +364,7 @@ h3 {
         <p>Thankyou so much for visiting my website, i hope this website doesn't disappoint you, and i hope that you'll like my website a lot.
             <br>Dont forget to visit this website again, i'll keep waiting!
         </p>
-        <p>Copyright @2022 | Made by Nabila</p>
+        <p>Copyright @2023-2024 | Made by Vibes Team</p>
     </section>
 
 
