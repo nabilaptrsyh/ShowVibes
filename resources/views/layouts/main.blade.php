@@ -10,7 +10,7 @@
 </head>
 <body class="font-sans bg-gray-900 text-white">
     <nav class="border-b border-gray-800">
-        <div class="container mx-auto flex items-center justify-between px-4 py-6">
+        <div class="container mx-auto px-4 flex items-center justify-between px-4 py-6">
             <ul class="flex items-center">
                 <li>
                     <a href="#">
@@ -29,7 +29,12 @@
             </ul>
             <div class="flex items-center">
                 <div>
-                    <input type="text" class="bg-gray-800 rounded-full w6-64 px-4 pl-8 py-1 focus:outline-none focus:shadow-outline" placeholder="Cari">
+                    <input type="text" class="bg-gray-800 text-sm rounded-full w6-64 px-4 pl-8 py-1 focus:outline-none focus:shadow-outline" placeholder="Cari">
+                    <div class="absolute top-0">
+                        <svg clas="fill-current w-4 text-gray-500 mt-2 ml-2" viewBox="0 0 24 24"><path
+                        class="heroicon-ui" d="M16.32 14.915.39 5.4a1 1 0 01-1.42 1.41-5.38-5.38a8 8 0
+                        111.41-1.41zM10 16a6 6 0 100-12 6 6 0 000 12z"/></svg>
+                    </div>
                 </div>
             </div>
         </div>
