@@ -1,6 +1,8 @@
 <?php
 
+use Illuminate\Routing\RouteRegistrar;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MoviesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,11 +15,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'MoviesController@index')->name('movies.index');
+Route::get('/movies/{movie}', 'MoviesController@show')->name('movies.show');
+Route::get('/',  [MoviesController::class , 'index']);
+Route::get('/movies/{movie}', [MoviesController::class, 'show']);
+Route::get('/movies/{id}', [MoviesController::class, 'show'])->name('movies.show');
+Route::get('/movies', [MoviesController::class, 'index'])->name('movies.index');
 
-Route::get('/home', function () {
-    return view('home');
-});
+Route::view('/home', 'home');
+
+// SENGAJA DI COMMENT DULU!
+// Route::view('/', 'index');
+// Route::view('/', 'show');
 
