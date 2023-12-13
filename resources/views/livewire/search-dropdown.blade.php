@@ -8,7 +8,7 @@
     <div class="absolute bg-gray-800 rounded w-64 mt-4">
         <ul>
             <li class="border-b border-gray-700">
-                <a href="#" class="block hover:bg-gray-700 px-3">Oppenheimer</a>
+                <a href="#" class="blocc hover:bg-gray-700 px-3">Oppenheimer</a>
             </li>
         </ul>
     </div>
