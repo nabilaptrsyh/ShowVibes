@@ -6,7 +6,7 @@
     <title>showVibes MovieApp</title>
 
     <link rel="stylesheet" href="/css/main.css">
-    <livewire:styles>
+    <livewire:styles />
     @vite('resources/css/app.css')
 </head>
 <body class="font-sans bg-gray-900 text-white">
@@ -24,6 +24,6 @@
         </div>
     </nav>
     @yield('content')
-    <livewire:scripts>
+    <livewire:styles />
 </body>
 </html>
