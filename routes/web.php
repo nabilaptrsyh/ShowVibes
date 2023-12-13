@@ -23,6 +23,7 @@ Route::get('/movies/{id}', [MoviesController::class, 'show'])->name('movies.show
 Route::get('/movies', [MoviesController::class, 'index'])->name('movies.index');
 
 Route::view('/home', 'home');
+// Route::view('/welcome', 'welcome');
 
 // SENGAJA DI COMMENT DULU!
 // Route::view('/', 'index');
