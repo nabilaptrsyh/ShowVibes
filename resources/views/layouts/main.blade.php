@@ -6,8 +6,8 @@
     <title>showVibes MovieApp</title>
 
     <link rel="stylesheet" href="/css/main.css">
-    <livewire:styles />
     @vite('resources/css/app.css')
+    @livewireStyles
 </head>
 <body class="font-sans bg-gray-900 text-white">
     <nav class="border-b border-gray-800">
@@ -19,11 +19,11 @@
                     </a>
             </ul>
             <div class="flex  flex-col md:flex-row items-center">
-               <livewire:search-dropdown>
+               <livewire:search-movie-dropdown>
             </div>
         </div>
     </nav>
     @yield('content')
-    <livewire:styles />
+    @livewireScripts
 </body>
 </html>
