@@ -76,16 +76,18 @@ nav img {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    padding: 20px;
+    margin: 0 auto;
 }
 
 .text-box h1 {
-    font-size: 62px;
+    font-size: 42px;
 }
 
 .text-box p {
-    margin: 10px 0 40px;
-    font-size: 18px;
-    color: #fff;
+    margin: 10px 0 20px;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 .hero-btn {
@@ -102,7 +104,7 @@ nav img {
 
 .hero-btn:hover {
     border: 1px solid #A9A9A9;
-    background: #A9A9A9;
+    background: #a9a9a9;
     transition: 0.5s;
 }
 
@@ -282,7 +284,20 @@ h3 {
     margin-left: 15%;
     margin-right: 15%;
 }
+
+/* Slider */
+.slider {
+    width: 100%;
+    max-height: 500px;
+    overflow: hidden;
+}
+
+.slider img {
+    width: 100%;
+    height: auto;
+}
 </style>
+
 
 <body>
     <section class="header">
@@ -291,16 +306,28 @@ h3 {
         <div class="nav-links" id="navLinks">
             <i class="fa fa-times" onclick="hideMenu()"></i>
             <ul>
-                <li><a href="#course">HOME</a></li>
-                <li><a href="#contact">ABOUT</a></li>
+                <li><a href="#course">LOGIN</a></li>
+                <li><a href="#contact">REGISTER</a></li>
             </ul>
         </div>
         <i class="fa fa-bars" onclick="showMenu()"></i>
     </nav>
 
+    <body>
+        <section class="header">
+            <!-- ... (Bagian header tetap sama) ... -->
+        </section>
+        
+        <!-- Slider -->
+        <div class="slider">
+            <img src="img/slider1.jpg" alt="Film 1">
+            <img src="img/slider2.jpg" alt="Film 2">
+            <img src="img/slider3.jpg" alt="Film 3">
+        </div>
+    
     <div class="text-box">
-        <h1>The World Biggest Movie</h1>
-        <p>Find out your movie just for a second!<br>Enjoy this website. If you interested this website<br>You have to:</p>
+        <h1>Film Terbesar di Dunia</h1>
+        <p>Cari tahu film Anda sebentar!<br>Nikmati situs web ini. Jika Anda tertarik dengan situs web ini<br>Kamu harus:</p>
         <a href="#" class="hero-btn">Login First</a>
     </div>
 
@@ -308,17 +335,17 @@ h3 {
     
     <!-- Course -->
     <section class="course" id="course">
-        <h1>The Options I Show</h1>
-        <p>Some options you can find in this website</p>
+        <h1>Opsi yang di Tampilkan</h1>
+        <p>Beberapa opsi dapat Anda temukan di situs web ini</p>
 
         <div class="row">
             <div class="course-col">
                 <h3>Movie's Photo</h3>
-                <p>You can see photos if you login that website.</p>
+                <p>Anda dapat melihat foto jika Anda masuk ke situs web itu.</p>
             </div>
             <div class="course-col">
                 <h3>Description</h3>
-                <p>You can see the description if you login that website.</p>
+                <p>Anda dapat melihat deskripsinya jika Anda login ke situs tersebut.</p>
             </div>
         </div>
 
@@ -326,8 +353,8 @@ h3 {
 
     <!-- Campus -->
     <section class="movie" id="movie">
-        <h1>The Spoiler That I Can Show You</h1>
-        <p>This viral movie will make you more interest with this website</p>
+        <h1>Spoiler yang bisa kami tunjukkan kepada Anda</h1>
+        <p>Film viral ini akan membuat Anda semakin tertarik dengan website ini</p>
     
         <div class="row">
             <div class="movie-col">
@@ -354,17 +381,17 @@ h3 {
 
     <!-- Contact -->
     <section class="contact" id="contact">
-        <h1>If you want to join this website, <br> You can contact us:</h1>
-        <a href="#" class="hero-btn">In here!</a>
+        <h1>Jika Anda ingin bergabung dengan situs ini, <br> Anda dapat menghubungi kami:</h1>
+        <a href="#" class="hero-btn">Disini!</a>
     </section>
 
     <!-- Footer -->
     <section class="footer">
-        <h4>About Us</h4>
-        <p>Thankyou so much for visiting my website, i hope this website doesn't disappoint you, and i hope that you'll like my website a lot.
-            <br>Dont forget to visit this website again, i'll keep waiting!
+        <h4>Tentang kami</h4>
+        <p>Terima kasih banyak telah mengunjungi situs web kami, kami harap situs web ini tidak mengecewakan Anda, dan saya harap Anda sangat menyukai situs web saya.
+            <br>Jangan lupa kunjungi website ini lagi, kami tunggu terus!
         </p>
-        <p>Copyright @2023-2024 | Made by Vibes Team</p>
+        <p>Copyright @2023-2024 | Dibuat oleh Vibes Team</p>
     </section>
 
 
@@ -379,5 +406,30 @@ h3 {
         }
     </script>
 
+<script>
+    var currentSlide = 0;
+    var slides = document.querySelectorAll('.slider img');
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            if (i === index) {
+                slide.style.display = 'block';
+            } else {
+                slide.style.display = 'none';
+            }
+        });
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    // Set interval to change slide every 3 seconds (adjust as needed)
+    setInterval(nextSlide, 3000);
+
+    // Initially show the first slide
+    showSlide(currentSlide);
+</script>
 </body>
 </html>
