@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>showVibes MovieApp</title>
+    <title>ShowVibes Movie</title>
 
     <link rel="stylesheet" href="/css/main.css">
     @vite('resources/css/app.css')

@@ -81,13 +81,14 @@ nav img {
 }
 
 .text-box h1 {
-    font-size: 42px;
+    font-size: 50px;
 }
 
 .text-box p {
     margin: 10px 0 20px;
-    font-size: 16px;
+    font-size: 30px;
     line-height: 1.5;
+    color: #fff;
 }
 
 .hero-btn {
@@ -288,7 +289,7 @@ h3 {
 /* Slider */
 .slider {
     width: 100%;
-    max-height: 500px;
+    max-height: 100%;
     overflow: hidden;
 }
 
@@ -315,23 +316,19 @@ h3 {
 
     <body>
         <section class="header">
-            <!-- ... (Bagian header tetap sama) ... -->
+            <div class="slider">
+                <img src="img/slider1.jpg" alt="Film 1">
+                <img src="img/slider2.jpg" alt="Film 2">
+                <img src="img/slider3.jpg" alt="Film 3">
+            </div>
+        <div class="text-box">
+            <h1>Film Terbesar di Dunia</h1>
+            <p>Cari tahu film Anda sebentar!<br>Nikmati situs web ini. Jika Anda tertarik dengan situs web ini?</p>
+        </div>
         </section>
+    </section>
         
         <!-- Slider -->
-        <div class="slider">
-            <img src="img/slider1.jpg" alt="Film 1">
-            <img src="img/slider2.jpg" alt="Film 2">
-            <img src="img/slider3.jpg" alt="Film 3">
-        </div>
-    
-    <div class="text-box">
-        <h1>Film Terbesar di Dunia</h1>
-        <p>Cari tahu film Anda sebentar!<br>Nikmati situs web ini. Jika Anda tertarik dengan situs web ini<br>Kamu harus:</p>
-        <a href="#" class="hero-btn">Login First</a>
-    </div>
-
-    </section>
     
     <!-- Course -->
     <section class="course" id="course">
