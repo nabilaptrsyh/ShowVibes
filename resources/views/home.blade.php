@@ -253,7 +253,7 @@ h3 {
 .contact {
     margin: 100px auto;
     width: 80%;
-    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(img/contactus.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(img/nav-header.jpeg);
     background-position: center;
     background-size: cover;
     border-radius: 10px;
@@ -307,8 +307,8 @@ h3 {
         <div class="nav-links" id="navLinks">
             <i class="fa fa-times" onclick="hideMenu()"></i>
             <ul>
-                <li><a href="#course">LOGIN</a></li>
-                <li><a href="#contact">REGISTER</a></li>
+                <li><a href="#">LOGIN</a></li>
+                <li><a href="#">REGISTER</a></li>
             </ul>
         </div>
         <i class="fa fa-bars" onclick="showMenu()"></i>
@@ -323,7 +323,7 @@ h3 {
             </div>
         <div class="text-box">
             <h1>Film Terbesar di Dunia</h1>
-            <p>Cari tahu film Anda sebentar!<br>Nikmati situs web ini. Jika Anda tertarik dengan situs web ini?</p>
+            <p>Cari tahu film Anda yuk!<br>Nikmati website ini jika Anda tertarik dengan websitenya!</p>
         </div>
         </section>
     </section>
@@ -355,21 +355,21 @@ h3 {
     
         <div class="row">
             <div class="movie-col">
-                <img src="img/godzilla.jpeg">
+                <img src="img/joker.jpeg">
                 <div class= "layer">
-                    <h3>AVENGERS</h3>
+                    <h3>JOKER</h3>
                 </div>
             </div>
             <div class="movie-col">
-                <img src="img/godzilla.jpeg">
+                <img src="img/sas.jpeg">
                 <div class= "layer">
-                    <h3>AVENGERS</h3>
+                    <h3>SAS:RED NOTICE</h3>
                 </div>
             </div>
             <div class="movie-col">
-                <img src="img/godzilla.jpeg">
+                <img src="img/oppenheimer.jpeg">
                 <div class= "layer">
-                    <h3>AVENGERS</h3>
+                    <h3>OPPEN HEIMER</h3>
                 </div>
             </div>
         
@@ -386,7 +386,7 @@ h3 {
     <section class="footer">
         <h4>Tentang kami</h4>
         <p>Terima kasih banyak telah mengunjungi situs web kami, kami harap situs web ini tidak mengecewakan Anda, dan saya harap Anda sangat menyukai situs web saya.
-            <br>Jangan lupa kunjungi website ini lagi, kami tunggu terus!
+            <br>Jangan lupa kunjungi website ini lagi, kami tunggu selalu!
         </p>
         <p>Copyright @2023-2024 | Dibuat oleh Vibes Team</p>
     </section>
