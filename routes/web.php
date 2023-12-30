@@ -1,8 +1,10 @@
 <?php
 
-use Illuminate\Routing\RouteRegistrar;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Routing\RouteRegistrar;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MoviesController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +24,7 @@ Route::get('/movies/{movie}', [MoviesController::class, 'show']);
 Route::get('/movies/{id}', [MoviesController::class, 'show'])->name('movies.show');
 Route::get('/movies', [MoviesController::class, 'index'])->name('movies.index');
 
+
 Route::view('/home', 'home');
 // Route::view('/welcome', 'welcome');
 
@@ -29,3 +32,21 @@ Route::view('/home', 'home');
 // Route::view('/', 'index');
 // Route::view('/', 'show');
 
+Route::get('auth/google',[App\Http\Controllers\GoogleController::class,'redirectToGoogle'])->name('google.login');
+
+//login
+//Login
+// Route::get('/login', [LoginController::class, 'index']);
+Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
+Route::post('/login', [LoginController::class, 'authenticate']);
+Route::post('/logout', [LoginController::class, 'logout']);
+
+//register
+Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
+Route::post('/register', [RegisterController::class, 'store']);
+
+
+// //Google APi
+// Auth::routes();
+// Route::get('auth/google', [App\Http\Controllers\GoogleController::class, 'redirectToGoogle'])->name('google.login');
+// Route::get('auth/google/callback', [App\Http\Controllers\GoogleController::class, 'handleGoogleCallback'])->name('google.callback');
