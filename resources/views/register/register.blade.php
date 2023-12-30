@@ -64,7 +64,7 @@
                       </div>
                       @enderror
                     </div>
-
+                    
                     <div class="form-floating">
                         <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="name@example.com" required value="{{ old('email') }}">
                         <label for="email">Email address</label>
@@ -74,7 +74,6 @@
                         </div>
                         @enderror
                     </div>
-                    
                     <div class="form-floating">
                       <input type="password" name="password" class="form-control rounded-bottom @error('password') is-invalid @enderror" id="password" placeholder="Password" required>
                       <label for="password">Password</label>
