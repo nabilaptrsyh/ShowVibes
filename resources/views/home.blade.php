@@ -16,7 +16,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.header {
+/* .header {
     min-height: 100vh;
     width: 100%;
     background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(img/header-nav.jpeg);
@@ -66,7 +66,7 @@ nav img {
 
 .nav-links ul li:hover::after {
     width: 100%;
-}
+} */
 
 .text-box {
     width: 90%;
@@ -301,7 +301,7 @@ h3 {
 
 
 <body>
-    <section class="header">
+    {{-- <section class="header">
     <nav>
         <a href="index.php"><img src=""></a>
         <div class="nav-links" id="navLinks">
@@ -312,18 +312,20 @@ h3 {
             </ul>
         </div>
         <i class="fa fa-bars" onclick="showMenu()"></i>
-    </nav>
+    </nav> --}}
 
     <body>
         <section class="header">
             <div class="slider">
-                <img src="img/slider1.jpg" alt="Film 1">
-                <img src="img/slider2.jpg" alt="Film 2">
-                <img src="img/slider3.jpg" alt="Film 3">
+                <img src="img/Slider1.png" alt="Film 1">
+                <img src="img/Slider2.png" alt="Film 2">
+                <img src="img/Slider3.png" alt="Film 3">
             </div>
         <div class="text-box">
             <h1>Film Terbesar di Dunia</h1>
-            <p>Cari tahu film Anda yuk!<br>Nikmati website ini jika Anda tertarik dengan websitenya!</p>
+            <p>Cari tahu film kesukaan kalian yuk!<br>Nikmati website ini jika kalian tertarik!<br>Silahkan cek websitenya!</p>
+            <a href="#" class="hero-btn">Sign Up First</a>
+            <a href="#" class="hero-btn">Log In</a>
         </div>
         </section>
     </section>
@@ -333,16 +335,16 @@ h3 {
     <!-- Course -->
     <section class="course" id="course">
         <h1>Opsi yang di Tampilkan</h1>
-        <p>Beberapa opsi dapat Anda temukan di situs web ini</p>
+        <p>Beberapa opsi dapat kalian temukan di situs web ini</p>
 
         <div class="row">
             <div class="course-col">
-                <h3>Movie's Photo</h3>
-                <p>Anda dapat melihat foto jika Anda masuk ke situs web itu.</p>
+                <h3>Poster Movies</h3>
+                <p>Kalian dapat melihat poster film jika kalian masuk ke website ini!</p>
             </div>
             <div class="course-col">
                 <h3>Description</h3>
-                <p>Anda dapat melihat deskripsinya jika Anda login ke situs tersebut.</p>
+                <p>Kalian dapat melihat deskripsi mulai dari rating, trailer, aktor, dan dokumentasi jika kalian login ke website ini!</p>
             </div>
         </div>
 
@@ -350,8 +352,8 @@ h3 {
 
     <!-- Campus -->
     <section class="movie" id="movie">
-        <h1>Spoiler yang bisa kami tunjukkan kepada Anda</h1>
-        <p>Film viral ini akan membuat Anda semakin tertarik dengan website ini</p>
+        <h1>Spoiler yang dapat kami tunjukkan kepada<br>kalian semua!</h1>
+        <p>Spoiler movie ini akan membuat kalian semakin tertarik dengan website kami!</p>
     
         <div class="row">
             <div class="movie-col">
@@ -378,15 +380,15 @@ h3 {
 
     <!-- Contact -->
     <section class="contact" id="contact">
-        <h1>Jika Anda ingin bergabung dengan situs ini, <br> Anda dapat menghubungi kami:</h1>
+        <h1>Jika kalian penasaran dengan situs ini, <br> Kalian dapat menghubungi kami di:</h1>
         <a href="#" class="hero-btn">Disini!</a>
     </section>
 
     <!-- Footer -->
     <section class="footer">
         <h4>Tentang kami</h4>
-        <p>Terima kasih banyak telah mengunjungi situs web kami, kami harap situs web ini tidak mengecewakan Anda, dan saya harap Anda sangat menyukai situs web saya.
-            <br>Jangan lupa kunjungi website ini lagi, kami tunggu selalu!
+        <p>Terima kasih banyak telah mengunjungi situs web kami, kami harap situs web ini tidak mengecewakan kalian, dan kami harap kalian sangat menyukai situs web kami.
+            <br>Jangan lupa kunjungi website ini lagi yaaa, kami tunggu selalu!!!
         </p>
         <p>Copyright @2023-2024 | Dibuat oleh Vibes Team</p>
     </section>
