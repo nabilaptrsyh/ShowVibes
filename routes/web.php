@@ -1,8 +1,10 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Routing\RouteRegistrar;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\MoviesController;
 use App\Http\Controllers\RegisterController;
 
@@ -38,9 +40,9 @@ Route::view('/home', 'home');
 //Login
 // Route::get('/login', [LoginController::class, 'index']);
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
-Route::post('/login', [LoginController::class, 'authenticate']);
-Route::post('/logout', [LoginController::class, 'logout']);
 
+// Route::post('/login', [LoginController::class, 'authenticate']);
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 //register
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);

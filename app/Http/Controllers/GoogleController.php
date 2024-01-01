@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Laravel\Socialite\Facades\Socialite;
 use App\Models\User;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Laravel\Socialite\Facades\Socialite;
 use Illuminate\Support\Facades\Auth; // Import Auth class
+
 class GoogleController extends Controller
 {
     public function redirectToGoogle ()
@@ -22,7 +24,7 @@ class GoogleController extends Controller
         if($findUser)
         {
             Auth::login($findUser);
-            return redirect()->intended('/');
+            return redirect()->intended('/index');
         }else{
             $newUser = User::create([
                 'name' => $user->getName(),
@@ -33,7 +35,7 @@ class GoogleController extends Controller
             ]);
 
             Auth::login($newUser);
-            return redirect()->intended('/'); 
+            return redirect()->intended('/index'); 
         }
     }
 }
