@@ -8,7 +8,7 @@
                 <a href="#" class="text-gray-400 hover:text-gray-600 font-medium">Dashboard</a>
             </li>
             <li class="text-gray-600 mr-2 font-medium">/</li>
-            <li class="text-gray-600 mr-2 font-medium">Analytics</li>
+            <li class="text-gray-600 mr-2 font-medium">Home</li>
         </ul>
 
         <!-- Searching -->
@@ -86,7 +86,7 @@
                                     <img src="https://placehold.co/32x32" alt="" class="w-8 h-8 rounded block object-cover align-middle">
                                     <div class="ml-2">
                                         <div class="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">New order</div>
-                                        <div class="text-[11px] text-gray-400">from a user</div>
+                                        <div class="text-[11px] text-gray-400">from a Joey Edison</div>
                                     </div>
                                 </a>
                             </li>
@@ -95,7 +95,7 @@
                                     <img src="https://placehold.co/32x32" alt="" class="w-8 h-8 rounded block object-cover align-middle">
                                     <div class="ml-2">
                                         <div class="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">New order</div>
-                                        <div class="text-[11px] text-gray-400">from a user</div>
+                                        <div class="text-[11px] text-gray-400">from a Gabby A</div>
                                     </div>
                                 </a>
                             </li>
@@ -104,7 +104,7 @@
                                     <img src="https://placehold.co/32x32" alt="" class="w-8 h-8 rounded block object-cover align-middle">
                                     <div class="ml-2">
                                         <div class="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">New order</div>
-                                        <div class="text-[11px] text-gray-400">from a user</div>
+                                        <div class="text-[11px] text-gray-400">from a Merry Bolston</div>
                                     </div>
                                 </a>
                             </li>
@@ -116,8 +116,8 @@
                                 <a href="#" class="py-2 px-4 flex items-center hover:bg-gray-50 group">
                                     <img src="https://placehold.co/32x32" alt="" class="w-8 h-8 rounded block object-cover align-middle">
                                     <div class="ml-2">
-                                        <div class="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">John Doe</div>
-                                        <div class="text-[11px] text-gray-400">Hello there!</div>
+                                        <div class="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">John Thimotie</div>
+                                        <div class="text-[11px] text-gray-400">Hello there! ...</div>
                                     </div>
                                 </a>
                             </li>
@@ -125,8 +125,8 @@
                                 <a href="#" class="py-2 px-4 flex items-center hover:bg-gray-50 group">
                                     <img src="https://placehold.co/32x32" alt="" class="w-8 h-8 rounded block object-cover align-middle">
                                     <div class="ml-2">
-                                        <div class="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">John Doe</div>
-                                        <div class="text-[11px] text-gray-400">Hello there!</div>
+                                        <div class="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">Cindy Olive</div>
+                                        <div class="text-[11px] text-gray-400">Hello there! ...</div>
                                     </div>
                                 </a>
                             </li>
@@ -134,8 +134,8 @@
                                 <a href="#" class="py-2 px-4 flex items-center hover:bg-gray-50 group">
                                     <img src="https://placehold.co/32x32" alt="" class="w-8 h-8 rounded block object-cover align-middle">
                                     <div class="ml-2">
-                                        <div class="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">John Doe</div>
-                                        <div class="text-[11px] text-gray-400">Hello there!</div>
+                                        <div class="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">Rio M</div>
+                                        <div class="text-[11px] text-gray-400">Hello there! ...</div>
                                     </div>
                                 </a>
                             </li>
@@ -150,12 +150,6 @@
                     <img src="https://placehold.co/32x32" alt="" class="w-8 h-8 rounded block object-cover align-middle">
                 </button>
                 <ul class="dropdown-menu shadow-md shadow-black/5 z-30 hidden py-1.5 rounded-md bg-white border border-gray-100 w-full max-w-[140px]">
-                    <li>
-                        <a href="profile.html" class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Profile</a>
-                    </li>
-                    <li>
-                        <a href="settings.html" class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Settings</a>
-                    </li>
                     <li>
                         <a href="#" class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Logout</a>
                     </li>
