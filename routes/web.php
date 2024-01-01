@@ -3,6 +3,9 @@
 use Illuminate\Routing\RouteRegistrar;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MoviesController;
+use App\Http\Controllers\GoogleController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +18,17 @@ use App\Http\Controllers\MoviesController;
 |
 */
 
+Route::get('/home', [HomeController::class, 'index']);
+
+// AUTH GOOGLE
+Route::get('auth/google', [GoogleController::class, 'redirectToGoogle'])->name('google.login');
+Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback'])->name('google.callback');
+
+// LOGIN
+Route::get('/login',  [LoginController::class,'index'])->name('login')-> middleware('guest');
+Route::post('/login',  [LoginController::class,'authenticate']);
+
+// UNTUK HALAMAN MOVIE
 Route::get('/', 'MoviesController@index')->name('movies.index');
 Route::get('/movies/{movie}', 'MoviesController@show')->name('movies.show');
 Route::get('/',  [MoviesController::class , 'index']);
