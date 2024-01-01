@@ -11,6 +11,7 @@
 </head>
 <body class="font-sans bg-gray-900 text-white">
     <nav class="border-b border-gray-800">
+
         <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 py-6">
             <ul class="flex flex-col md:flex-row items-center">
                 <li>
@@ -21,6 +22,17 @@
             <div class="flex  flex-col md:flex-row items-center">
                <livewire:search-movie-dropdown>
             </div>
+            
+                @auth 
+                    <div class=" font-sans bg-gray-900 text-white">
+                    Welcome , {{auth()->user()->name }}</div>
+                          @csrf
+                          <form action="/logout" method="post" >
+                            @csrf 
+                            <button type="submit" class="block ml-1 px-14 py-2 text-sm text-gray-700 hover:bg-gray-100">Sign out</button>
+                          </form>
+                        </div>
+                        @endauth
         </div>
         <div>
             {{-- <ul>

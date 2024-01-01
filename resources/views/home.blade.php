@@ -325,7 +325,7 @@ h3 {
             <h1>Film Terbesar di Dunia</h1>
             <p>Cari tahu film kesukaan kalian yuk!<br>Nikmati website ini jika kalian tertarik!<br>Silahkan cek websitenya!</p>
             <a href="#" class="hero-btn">Sign Up First</a>
-            <a href="#" class="hero-btn">Log In</a>
+            <a href="/login" class="hero-btn">Log In</a>
         </div>
         </section>
     </section>
