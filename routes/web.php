@@ -18,6 +18,7 @@ use App\Http\Controllers\HomeController;
 |
 */
 
+Route::get('/', [HomeController::class, 'index']);
 Route::get('/home', [HomeController::class, 'index']);
 
 // AUTH GOOGLE
@@ -27,19 +28,14 @@ Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallba
 // LOGIN
 Route::get('/login',  [LoginController::class,'index'])->name('login')-> middleware('guest');
 Route::post('/login',  [LoginController::class,'authenticate']);
+Route::post('/logout',  [LoginController::class,'logout']);
 
 // UNTUK HALAMAN MOVIE
-Route::get('/', 'MoviesController@index')->name('movies.index');
+// Route::get('/', 'MoviesController@index')->name('movies.index');
+
 Route::get('/movies/{movie}', 'MoviesController@show')->name('movies.show');
-Route::get('/',  [MoviesController::class , 'index']);
+
+// Route::get('/',  [MoviesController::class , 'index']);
 Route::get('/movies/{movie}', [MoviesController::class, 'show']);
 Route::get('/movies/{id}', [MoviesController::class, 'show'])->name('movies.show');
-Route::get('/movies', [MoviesController::class, 'index'])->name('movies.index');
-
-Route::view('/home', 'home');
-// Route::view('/welcome', 'welcome');
-
-// SENGAJA DI COMMENT DULU!
-// Route::view('/', 'index');
-// Route::view('/', 'show');
-
+Route::get('/movies', [MoviesController::class, 'index'])->name('movies.index')->middleware('auth');
