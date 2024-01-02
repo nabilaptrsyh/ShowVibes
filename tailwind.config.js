@@ -1,26 +1,21 @@
+import defaultTheme from 'tailwindcss/defaultTheme';
+import forms from '@tailwindcss/forms';
+
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./resources/**/*.blade.php",
-    "./resources/**/*.js",
-    "./resources/**/*.vue",
-  ],
-  theme: {
-    extend: {
-      width: {
-        '96': '24rem',
-      }
+    content: [
+        './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
+        './storage/framework/views/*.php',
+        './resources/views/**/*.blade.php',
+    ],
+
+    theme: {
+        extend: {
+            fontFamily: {
+                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+            },
+        },
     },
-    spinner: (theme) => ({
-      default: {
-        color: '#dae1e7',
-        size: '1em',
-        border: '2px',
-        speed: '500ms',
-  },
-}),
-  },
-  plugins: [
-    require('tailwindcss-spinner')(),
-  ],
-}
+
+    plugins: [forms],
+};

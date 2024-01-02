@@ -1,7 +1,8 @@
-{{-- //resources/views/layouts/sidebar.blade.php --}}
-@extends('kategori.sidebar')
+@extends('kategori.movie')
 
 @section('content')
+
+
 
 <body>
     <div class="flex-center position-ref full-height">
@@ -30,7 +31,7 @@
             </a>
         </li>
         <li class="mb-1 group">
-            <a href="aside.blade.php" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100 sidebar-dropdown-toggle">
+            <a href="movies.index" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100 sidebar-dropdown-toggle">
                 <i class="ri-film-line mr-3 text-lg"></i>
                 <span class="text-sm">Movie</span>
                 <i class="ri-arrow-right-s-line ml-auto group-[.selected]:rotate-90"></i>
@@ -41,7 +42,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
   
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="movies.index">
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-laugh-wink"></i>
         </div>
@@ -126,8 +127,8 @@
                                         <a href="#" class="py-2 px-4 flex items-center hover:bg-gray-50 group">
                                             <img src="https://placehold.co/32x32" alt="" class="w-8 h-8 rounded block object-cover align-middle">
                                             <div class="ml-2">
-                                                <div class="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">Keluarga Cemara 2</div>
-                                                <div class="text-[11px] text-gray-400">8.9</div>
+                                                <div class="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">Joker</div>
+                                                <div class="text-[11px] text-gray-400">8.6</div>
                                             </div>
                                         </a>
                                     </li>
@@ -145,7 +146,7 @@
                                             <img src="https://placehold.co/32x32" alt="" class="w-8 h-8 rounded block object-cover align-middle">
                                             <div class="ml-2">
                                                 <div class="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">The Nun 2</div>
-                                                <div class="text-[11px] text-gray-400">8.5</div>
+                                                <div class="text-[11px] text-gray-400">8.7</div>
                                             </div>
                                         </a>
                                     </li>
@@ -171,7 +172,7 @@
                                         <a href="#" class="py-2 px-4 flex items-center hover:bg-gray-50 group">
                                             <img src="https://placehold.co/32x32" alt="" class="w-8 h-8 rounded block object-cover align-middle">
                                             <div class="ml-2">
-                                                <div class="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">New order</div>
+                                                <div class="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">New User</div>
                                                 <div class="text-[11px] text-gray-400">from a Rio M</div>
                                             </div>
                                         </a>
@@ -180,7 +181,7 @@
                                         <a href="#" class="py-2 px-4 flex items-center hover:bg-gray-50 group">
                                             <img src="https://placehold.co/32x32" alt="" class="w-8 h-8 rounded block object-cover align-middle">
                                             <div class="ml-2">
-                                                <div class="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">New order</div>
+                                                <div class="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">New User</div>
                                                 <div class="text-[11px] text-gray-400">from a Vallery Agatha</div>
                                             </div>
                                         </a>
@@ -189,7 +190,7 @@
                                         <a href="#" class="py-2 px-4 flex items-center hover:bg-gray-50 group">
                                             <img src="https://placehold.co/32x32" alt="" class="w-8 h-8 rounded block object-cover align-middle">
                                             <div class="ml-2">
-                                                <div class="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">New order</div>
+                                                <div class="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">New User</div>
                                                 <div class="text-[11px] text-gray-400">from a William Bolston</div>
                                             </div>
                                         </a>
@@ -237,14 +238,14 @@
                             <img src="https://placehold.co/32x32" alt="" class="w-8 h-8 rounded block object-cover align-middle">
                         </button>
                         <ul class="dropdown-menu shadow-md shadow-black/5 z-30 hidden py-1.5 rounded-md bg-white border border-gray-100 w-full max-w-[140px]">
-                            <li>
+                            {{-- <li>
                                 <a href="profile.html" class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Profile</a>
                             </li>
                             <li>
                                 <a href="settings.html" class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Settings</a>
-                            </li>
+                            </li> --}}
                             <li>
-                                <a href="#" class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Logout</a>
+                                <a href="/home" class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Logout</a>
                             </li>
                         </ul>
                     </li>

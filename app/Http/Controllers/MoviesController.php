@@ -26,55 +26,103 @@ class MoviesController extends Controller
     // }
 
     // INI CODINGAN PENGGANTI YANG DIATAS
-    public function index()
-{
-    $apiUrl = 'https://api.themoviedb.org/3/movie/popular';
-    $token = config('services.tmdb.token');
+    public function index() {
+        $apiUrl = 'https://api.themoviedb.org/3/movie/popular';
+        $token = config('services.tmdb.token');
 
-    $response = Http::withToken(config('services.tmdb.token'))
-        ->get('https://api.themoviedb.org/3/movie/popular');
+        $response = Http::withToken(config('services.tmdb.token'))
+            ->get('https://api.themoviedb.org/3/movie/popular');
 
-    if ($response->successful()) {
-        $popularMovies = $response->json()['results'];
-    } else {
-        $popularMovies = [];
+        if ($response->successful()) {
+            $popularMovies = $response->json()['results'];
+        } else {
+            $popularMovies = [];
+        }
+
+        // dd($popularMovies);
+
+        $response = Http::withToken(config('services.tmdb.token'))
+            ->get('https://api.themoviedb.org/3/movie/now_playing');
+
+        if ($response->successful()) {
+            $nowPlayingMovies = $response->json()['results'];
+        } else {
+            $nowPlayingMovies = [];
+        }
+
+        $response = Http::withToken(config('services.tmdb.token'))
+            ->get('https://api.themoviedb.org/3/genre/movie/list');
+
+        if ($response->successful()) {
+            $genresArray = $response->json()['genres'];
+        } else {
+            $genresArray = [];
+        }
+
+        $genres = collect($genresArray)->mapWithKeys(function ($genre) {
+            return [$genre['id'] => $genre['name']];
+        });
+
+        // dd($nowPlayingMovies);
+        // dump($genres);
+        
+    //      return response()->json([
+    //             'success' => true,
+    //             'message' => 'bebas',
+    //             'data' => $token
+    //         ]);
+
+        return view('index', compact('popularMovies', 'genres', 'nowPlayingMovies'));
     }
 
-    // dd($popularMovies);
+    public function dashboardIndex() {
+        $apiUrl = 'https://api.themoviedb.org/3/movie/popular';
+        $token = config('services.tmdb.token');
 
-    $response = Http::withToken(config('services.tmdb.token'))
-        ->get('https://api.themoviedb.org/3/movie/now_playing');
+        $response = Http::withToken(config('services.tmdb.token'))
+            ->get('https://api.themoviedb.org/3/movie/popular');
 
-    if ($response->successful()) {
-        $nowPlayingMovies = $response->json()['results'];
-    } else {
-        $nowPlayingMovies = [];
+        if ($response->successful()) {
+            $popularMovies = $response->json()['results'];
+        } else {
+            $popularMovies = [];
+        }
+
+        // dd($popularMovies);
+
+        $response = Http::withToken(config('services.tmdb.token'))
+            ->get('https://api.themoviedb.org/3/movie/now_playing');
+
+        if ($response->successful()) {
+            $nowPlayingMovies = $response->json()['results'];
+        } else {
+            $nowPlayingMovies = [];
+        }
+
+        $response = Http::withToken(config('services.tmdb.token'))
+            ->get('https://api.themoviedb.org/3/genre/movie/list');
+
+        if ($response->successful()) {
+            $genresArray = $response->json()['genres'];
+        } else {
+            $genresArray = [];
+        }
+
+        $genres = collect($genresArray)->mapWithKeys(function ($genre) {
+            return [$genre['id'] => $genre['name']];
+        });
+
+        // dd($nowPlayingMovies);
+        // dump($genres);
+        
+        //      return response()->json([
+        //             'success' => true,
+        //             'message' => 'bebas',
+        //             'data' => $token
+        //         ]);
+
+        return view('dashboard.user.index', compact('popularMovies', 'genres', 'nowPlayingMovies'));
     }
-
-    $response = Http::withToken(config('services.tmdb.token'))
-        ->get('https://api.themoviedb.org/3/genre/movie/list');
-
-    if ($response->successful()) {
-        $genresArray = $response->json()['genres'];
-    } else {
-        $genresArray = [];
-    }
-
-    $genres = collect($genresArray)->mapWithKeys(function ($genre) {
-        return [$genre['id'] => $genre['name']];
-    });
-
-    // dd($nowPlayingMovies);
-    // dump($genres);
-     
-//      return response()->json([
-//             'success' => true,
-//             'message' => 'bebas',
-//             'data' => $token
-//         ]);
-
-    return view('index', compact('popularMovies', 'genres', 'nowPlayingMovies'));
-}
 
     /**
      * Show the form for creating a new resource.

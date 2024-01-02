@@ -2,6 +2,11 @@
 
 @section('content')
 
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    
 <body>
     <div class="flex-center position-ref full-height">
         @if (Route::has('login'))
@@ -29,7 +34,7 @@
             </a>
         </li>
         <li class="mb-1 group">
-            <a href="aside.blade.php" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100 sidebar-dropdown-toggle">
+            <a href="movies.index" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100 sidebar-dropdown-toggle">
                 <i class="ri-film-line mr-3 text-lg"></i>
                 <span class="text-sm">Movie</span>
                 <i class="ri-arrow-right-s-line ml-auto group-[.selected]:rotate-90"></i>
@@ -83,5 +88,7 @@
 </div>
 <div class="fixed top-0 left-0 w-full h-full bg-black/50 z-40 md:hidden sidebar-overlay"></div>
 </body>
+
+</html>
 
 @endsection
