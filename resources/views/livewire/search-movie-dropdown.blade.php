@@ -26,7 +26,7 @@
             <ul>
                 @forelse($searchResult as $result)
                     <li class="border-b border-gray-700">
-                        <a href="{{ route('movies.show', $result['id']) }}" class="block hover:bg-gray-700 px-3 py-3 flex items-center">
+                        <a href="/movies/{{ $result['id'] }}" class="block hover:bg-gray-700 px-3 py-3 flex items-center">
                             @if ($result['poster_path'])
                                 <img src="https://image.tmdb.org/t/p/w92/{{ $result['poster_path'] }}" alt="poster" class="w-8">
                             @else
