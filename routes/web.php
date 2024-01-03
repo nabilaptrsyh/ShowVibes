@@ -64,24 +64,24 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile-user', [ProfileController::class, 'destroyUser'])->name('profileUser.destroy');
 });
 
-Route::middleware(['auth', 'admin'])->group(function () {
-    Route::get('/admin/kategori', [AdminMoviesController::class, 'index'])->name('movies.index');
-    Route::get('/admin/kategori/{movie}', [AdminMoviesController::class, 'show'])->name('movies.show');
-    // Route::get('/admin/movies/create', [AdminMoviesController::class, 'create'])->name('movies.create');
-    // Route::post('/admin/movies', [AdminMoviesController::class, 'store'])->name('movies.store');
-    // Route::get('/admin/movies/{movie}/edit', [AdminMoviesController::class, 'edit'])->name('movies.edit');
-    // Route::patch('/admin/movies/{movie}', [AdminMoviesController::class, 'update'])->name('movies.update');
-    // Route::delete('/admin/movies/{movie}', [AdminMoviesController::class, 'destroy'])->name('movies.destroy');
-});
+// Route::middleware(['auth', 'admin'])->group(function () {
+//     Route::get('/admin/kategori', [AdminMoviesController::class, 'index'])->name('movies.index');
+//     Route::get('/admin/kategori/{movie}', [AdminMoviesController::class, 'show'])->name('movies.show');
+//     // Route::get('/admin/movies/create', [AdminMoviesController::class, 'create'])->name('movies.create');
+//     // Route::post('/admin/movies', [AdminMoviesController::class, 'store'])->name('movies.store');
+//     // Route::get('/admin/movies/{movie}/edit', [AdminMoviesController::class, 'edit'])->name('movies.edit');
+//     // Route::patch('/admin/movies/{movie}', [AdminMoviesController::class, 'update'])->name('movies.update');
+//     // Route::delete('/admin/movies/{movie}', [AdminMoviesController::class, 'destroy'])->name('movies.destroy');
+// });
 
 Route::middleware(['auth', 'admin'])->group(function () {
-    Route::get('/admin/movies', [AdminMoviesController::class, 'index'])->name('movies.index');
-    Route::get('/admin/movies/{movie}', [AdminMoviesController::class, 'show'])->name('movies.show');
-    Route::get('/admin/movies/create', [AdminMoviesController::class, 'create'])->name('movies.create');
-    Route::post('/admin/movies', [AdminMoviesController::class, 'store'])->name('movies.store');
-    Route::get('/admin/movies/{movie}/edit', [AdminMoviesController::class, 'edit'])->name('movies.edit');
-    Route::patch('/admin/movies/{movie}', [AdminMoviesController::class, 'update'])->name('movies.update');
-    Route::delete('/admin/movies/{movie}', [AdminMoviesController::class, 'destroy'])->name('movies.destroy');
+    Route::get('/admin/layouts', [AdminMoviesController::class, 'index'])->name('movies.index');
+    Route::get('/admin/layouts', [AdminMoviesController::class, 'show'])->name('movies.show');
+    Route::get('/admin/layouts/create', [AdminMoviesController::class, 'create'])->name('movies.create');
+    Route::post('/admin', [AdminMoviesController::class, 'store'])->name('movies.store');
+    Route::get('/admin/layouts/edit', [AdminMoviesController::class, 'edit'])->name('movies.edit');
+    Route::patch('/admin', [AdminMoviesController::class, 'update'])->name('movies.update');
+    Route::delete('/admin', [AdminMoviesController::class, 'destroy'])->name('movies.destroy');
 });
 
 Route::get('/login', function () {

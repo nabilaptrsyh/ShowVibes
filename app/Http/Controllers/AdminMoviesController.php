@@ -20,7 +20,7 @@ class AdminMoviesController extends Controller {
      * Show the form for creating a new resource.
      */
     public function create() {
-        return view('dashboard.admin.movies.create', [
+        return view('dashboard.admin.layouts.create', [
             'movies' => Movies::all()
         ]);
     }
@@ -33,6 +33,7 @@ class AdminMoviesController extends Controller {
             'nama' => 'required|string|max:255',
             'genre' => 'required|string',
             'rating' => 'required|integer',
+            'img' => 'required|image|mimes:jpeg,png,jpg,gif|max:32x32',
         ]);
 
         // Menggunakan transaksi database untuk memastikan konsistensi
@@ -40,11 +41,11 @@ class AdminMoviesController extends Controller {
         try {
             // Menyimpan buku
             $movie = Movies::create($request->all());
-            return redirect()->route('dashboard.admin.movies.index')->with('success', 'Buku berhasil ditambahkan.');
+            return redirect()->route('dashboard.admin.layouts.index')->with('success', 'Buku berhasil ditambahkan.');
         } catch (\Exception $e) {
             // Rollback transaksi jika ada kesalahan
 
-            return redirect()->route('dashboard.admin.movies.index')->with('error', 'Buku gagal ditambahkan.');
+            return redirect()->route('dashboard.admin.layouts.index')->with('error', 'Buku gagal ditambahkan.');
         }
     }
 
@@ -53,7 +54,7 @@ class AdminMoviesController extends Controller {
      */
     public function show(Movies $movie)
     {
-        return view('dashboard.admin.movies.show', compact('movie'));
+        return view('dashboard.admin.layouts.show', compact('movie'));
     }
 
     /**
@@ -61,7 +62,11 @@ class AdminMoviesController extends Controller {
      */
     public function edit(Movies $movie)
     {
-        return view('dashboard.admin.movies.edit', [
+        return view('dashboard.admin.layouts.edit', [
+            // 'nama' => $nama,
+            // 'genre' => $genre,
+            // 'rating' => $rating
+
             // 'book' => $book,
             // 'writters' => $writters,
             // 'publishers' => $publishers,
@@ -82,9 +87,9 @@ class AdminMoviesController extends Controller {
 
         try {
             $movie->update($request->all());
-            return redirect()->route('dashboard.admin.movies.index')->with('success', 'Movie berhasil diupdate.');
+            return redirect()->route('dashboard.admin.layouts.index')->with('success', 'Movie berhasil diupdate.');
         } catch (\Exception $e) {
-            return redirect()->route('dashboard.admin.movies.index')->with('error', 'Movie gagal diupdate.');
+            return redirect()->route('dashboard.admin.layouts.index')->with('error', 'Movie gagal diupdate.');
         }
     }
 
@@ -95,9 +100,9 @@ class AdminMoviesController extends Controller {
     {
         try {
             $movie->delete();
-            return redirect()->route('dashboard.admin.movies.index')->with('success', 'Movie berhasil dihapus.');
+            return redirect()->route('dashboard.admin.layouts.index')->with('success', 'Movie berhasil dihapus.');
         } catch (\Exception $e) {
-            return redirect()->route('dashboard.admin.movies.index')->with('error', 'Movie gagal dihapus.');
+            return redirect()->route('dashboard.admin.layouts.index')->with('error', 'Movie gagal dihapus.');
         }
     }
 }
