@@ -381,7 +381,7 @@ h3 {
     <!-- Contact -->
     <section class="contact" id="contact">
         <h1>Jika kalian penasaran dengan situs ini, <br> Kalian dapat menghubungi kami di:</h1>
-        <a href="#" class="hero-btn">Disini!</a>
+        <a href="https://www.instagram.com/nabilaptrsyh" class="hero-btn">Disini!</a>
     </section>
 
     <!-- Footer -->

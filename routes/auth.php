@@ -57,3 +57,12 @@ Route::middleware('auth')->group(function () {
     Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])
                 ->name('logout');
 });
+
+// Route::middleware('auth')->group(function () {
+//     Route::get('create', ::class)
+//         ->name('create');  // Ganti 'CreateController' dengan nama controller yang sesuai
+
+//     // Anda juga bisa menambahkan route POST untuk menangani proses penciptaan data
+//     Route::post('create', [AdminController::class, 'store'])
+//         ->name('create.store');  // Ganti 'CreateController' dengan nama controller yang sesuai
+// });

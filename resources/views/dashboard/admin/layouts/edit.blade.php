@@ -1,4 +1,4 @@
-@extends('dashboard.layouts.main')
+@extends('dashboard.layouts.admin')
 
 @section('container')
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
@@ -10,7 +10,7 @@
     @method('put')
     @csrf
     <div class="mb-3">
-      <label for="title" class="form-label">Title</label>
+      <label for="title" class="form-label">Nama</label>
       <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title" required autofocus value="{{ old('title', $post->title) }}">
       @error('title')
       <div class="invalid-feedback">
@@ -19,7 +19,7 @@
       @enderror
     </div>
     <div class="mb-3">
-      <label for="slug" class="form-label">Slug</label>
+      <label for="slug" class="form-label">Genre</label>
       <input type="text" class="form-control @error('slug') is-invalid @enderror" id="slug" name="slug" required value="{{ old('slug', $post->slug) }}">
       @error('slug')
       <div class="invalid-feedback">
@@ -28,7 +28,7 @@
       @enderror
     </div>
     <div class="mb-3">
-      <label for="category" class="form-label">Category</label>
+      <label for="category" class="form-label">Rating</label>
       <select class="form-select" name="category_id">
         @foreach ($categories as $category)
         @if(old('category_id', $post->category) == $category->id)
@@ -67,10 +67,10 @@
 </div>
 
 <script>
-  const title = document.querySelector('#title');
-  const slug = document.querySelector('#slug');
+  const nama = document.querySelector('#nama');
+  const nama = document.querySelector('#genre');
   title.addEventListener('change', function() {
-    fetch('/dashboard/posts/checkSlug?title=' + title.value)
+    fetch('/admin/index/checkSlug?title=' + title.value)
       .then(response => response.json())
       .then(data => slug.value = data.slug)
   });
